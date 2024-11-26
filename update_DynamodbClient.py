@@ -19,61 +19,61 @@ movies = [
         "title": "Bad Boys 2",
         "releaseYear": 2003,
         "genre": "Action",
-        "coverUrl": "s3://serverlessmovieapibucket/movieCovers/bad_boys_2.jpg"
+        "coverUrl": "https://serverlessmovieapibucket.s3.us-east-1.amazonaws.com/movieCovers/bad_boys_2.jpg"
     },
     {
         "title": "Coach Carter",
         "releaseYear": 2005,
         "genre": "Sports",
-        "coverUrl": "s3://serverlessmovieapibucket/movieCovers/coach_carter.jpg"
+        "coverUrl": "https://serverlessmovieapibucket.s3.us-east-1.amazonaws.com/movieCovers/coach_carter.jpg"
     },
     {
         "title": "Dragon Ball Z: Fusion Reborn",
         "releaseYear": 1995,
         "genre": "Anime",
-        "coverUrl": "s3://serverlessmovieapibucket/movieCovers/dragon_ball_z_fusion_reborn.jpg"
+        "coverUrl": "https://serverlessmovieapibucket.s3.us-east-1.amazonaws.com/movieCovers/dragon_ball_z_fusion_reborn.jpg"
     },
     {
         "title": "Hidden Figures",
         "releaseYear": 2016,
         "genre": "History",
-        "coverUrl": "s3://serverlessmovieapibucket/movieCovers/hidden_figures.jpg"
+        "coverUrl": "https://serverlessmovieapibucket.s3.us-east-1.amazonaws.com/movieCovers/hidden_figures.jpg"
     },
     {
         "title": "Love and Basketball",
         "releaseYear": 2000,
         "genre": "Romance",
-        "coverUrl": "s3://serverlessmovieapibucket/movieCovers/love_and_basketball.jpg"
+        "coverUrl": "https://serverlessmovieapibucket.s3.us-east-1.amazonaws.com/movieCovers/love_and_basketball.jpg"
     },
     {
         "title": "Pokemon: The First Movie",
         "releaseYear": 1998,
         "genre": "Anime",
-        "coverUrl": "s3://serverlessmovieapibucket/movieCovers/pokemon_the_first_movie.jpg"
+        "coverUrl": "https://serverlessmovieapibucket.s3.us-east-1.amazonaws.com/movieCovers/pokemon_the_first_movie.jpg"
     },
     {
         "title": "Terminator 2: Judgment Day",
         "releaseYear": 1991,
         "genre": "Sci-Fi",
-        "coverUrl": "s3://serverlessmovieapibucket/movieCovers/terminator_2.jpg"
+        "coverUrl": "https://serverlessmovieapibucket.s3.us-east-1.amazonaws.com/movieCovers/terminator_2.jpg"
     },
     {
         "title": "The Dark Knight",
         "releaseYear": 2008,
         "genre": "Action",
-        "coverUrl": "s3://serverlessmovieapibucket/movieCovers/the_dark_knight.jpeg"
+        "coverUrl": "https://serverlessmovieapibucket.s3.us-east-1.amazonaws.com/movieCovers/the_dark_knight.jpeg"
     },
     {
         "title": "Toy Story 2",
         "releaseYear": 1999,
         "genre": "Animation",
-        "coverUrl": "s3://serverlessmovieapibucket/movieCovers/toy_story.jpeg"
+        "coverUrl": "https://serverlessmovieapibucket.s3.us-east-1.amazonaws.com/movieCovers/toy_story_2.jpeg"
     },
     {
         "title": "Your Name",
         "releaseYear": 2016,
         "genre": "Anime",
-        "coverUrl": "s3://serverlessmovieapibucket/movieCovers/your_name.jpeg"
+        "coverUrl": "https://serverlessmovieapibucket.s3.us-east-1.amazonaws.com/movieCovers/your_name.jpeg"
     }
 ]
 

@@ -11,7 +11,7 @@ class DecimalEncoder(json.JSONEncoder):
         return super(DecimalEncoder, self).default(obj)
 
 def lambda_handler(event, context):
-    print("Event:", json.dumps(event))  # Log the event for debugging
+    print("Event:", json.dumps(event))  # Logging for debugging
 
     # Extract and validate 'releaseYear' query parameter
     release_year = event.get('queryStringParameters', {}).get('releaseyear')
