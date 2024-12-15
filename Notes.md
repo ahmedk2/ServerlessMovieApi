@@ -57,3 +57,18 @@ I also tested my lambda using the following event
 Working link to view movies by release year is [here](https://1sxwpeubpk.execute-api.us-east-1.amazonaws.com/prod/getmoviesbyyear?releaseyear=1999)
 
 ![alt text](/resources/image.png)
+
+
+### Making a frontend
+
+When making a frontend and testing locally I had to enable CORS on the API gateway to fetch data. Specifically on each resource. Since I was getting CORS not enabled errors on the browser console log
+
+Although for the sub resource `/getmoviesbyyear` CORS still was not enabled probably when searching movies by release year. I had to add CORS response headers in my lambda function as mentioned in the [AWS docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors-console.html):
+
+```
+When applying the above instructions to the ANY method in a proxy integration, any applicable CORS headers will not be set. 
+
+Instead, your backend must return the applicable CORS headers, such as Access-Control-Allow-Origin
+```
+
+I was using lambda proxy integration for this specific API resource `/getmoviesbyyear` so the above made sense but I did not properly take this in until an hour later.
