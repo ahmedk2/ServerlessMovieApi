@@ -22,12 +22,28 @@
         }
         .search-bar {
             margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
         }
         .search-bar input {
             padding: 10px;
             width: 300px;
             border: 1px solid #ccc;
             border-radius: 5px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-bar button.search {
+            background-color: #6200ea;
+            color: white;
+        }
+        .search-bar button.reset {
+            background-color: #ccc;
+            color: black;
         }
         .movies {
             display: grid;
@@ -69,7 +85,8 @@
     <div class="container">
         <div class="search-bar">
             <input type="number" id="yearInput" placeholder="Enter release year (e.g., 2016)">
-            <button onclick="fetchMoviesByYear()">Search</button>
+            <button class="search" onclick="fetchMoviesByYear()">Search</button>
+            <button class="reset" onclick="resetMovies()">Reset</button>
         </div>
         <div class="movies" id="moviesContainer">
             <!-- Movie cards will be inserted here dynamically -->
@@ -133,6 +150,20 @@
                 moviesContainer.appendChild(movieCard);
             });
         }
+
+        function resetMovies() {
+            document.getElementById('yearInput').value = ''; // Clear the input field
+            fetchMovies(); // Fetch and display all movies again
+        }
+
+        function handleEnterKey(event) {
+            if (event.key === 'Enter') {
+                fetchMoviesByYear();
+            }
+        }
+
+        // Add event listener to input field for the Enter key
+        document.getElementById('yearInput').addEventListener('keydown', handleEnterKey);
 
         // Load all movies on initial page load
         window.addEventListener('DOMContentLoaded', fetchMovies);
