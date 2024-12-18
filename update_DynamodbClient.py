@@ -77,7 +77,7 @@ movies = [
     }
 ]
 
-
+# Uploading the multiple items in a batch to the table via looping
 with TableName.batch_writer() as batch:
     for item in movies:
         response = batch.put_item(Item={
@@ -87,6 +87,7 @@ with TableName.batch_writer() as batch:
             "coverUrl": item["coverUrl"]
         })
 
+# Single item
 # response = TableName.put_item(
 #     Item={
 #         "title": "Bad Boys 2",

@@ -20,5 +20,6 @@ all_files = ["movieCovers/bad_boys_2.jpg", "movieCovers/coach_carter.jpg",
 # Loop through all files and upload them to s3
 for x in all_files:
     with open(x, "rb") as f:
+        # Using builtin function from boto3 to upload the file to a bucket using the local file path for the s3 key (file path)
         client.upload_fileobj(f, "serverlessmovieapibucket", x)
 

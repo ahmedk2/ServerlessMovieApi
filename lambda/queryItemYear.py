@@ -36,7 +36,7 @@ def lambda_handler(event, context):
         # Serialize the response to handle DynamoDB's Decimal type
         items = response['Items']
 
-        # Return the result
+        # Return the result and help resolve CORS errors
         return {
             "statusCode": 200,
             "headers": {
