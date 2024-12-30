@@ -1,0 +1,6 @@
+Flask==1.1.4
+Flask-Cors==3.0.10
+boto3==1.28.0  # Or the latest compatible version
+botocore==1.31.0  # Ensure compatibility with boto3
+python-dotenv==0.18.0
+markupsafe<2.1

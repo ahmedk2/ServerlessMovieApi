@@ -72,3 +72,23 @@ Instead, your backend must return the applicable CORS headers, such as Access-Co
 ```
 
 I was using lambda proxy integration for this specific API resource `/getmoviesbyyear` so the above made sense but I did not properly take this in until an hour later.
+
+## Phase 4
+
+My lambda function was no longer helpful. I needed to setup a backend that communicates with front end to retrieve movie data. In phase 3, I used only a front end and api gateway URLs to fetch DyanmoDB data via lambda functions.
+
+I tried making a backend in flask, got it working doing some terminal commands and installing packages (`specify later check terminal history`). I had issues with cors and other flask related errors. Resolved it by installing a specific version of flask cors package (`pip install flask-cors==3.0.7`) that supports python 2.7. Since newer package version is meant for python 3. There were some JSON serialization errors but I used the same solution as when I was making the lambda function.
+
+I got it all working locally by editing the front end to reference backend endpoint/ports
+
+For the backend to function locally you need to setup your environment variables to your AWS key tokens. You can change the name of the dynamoDB table to be your table. Then you can do the following:
+
+`docker compose up`
+
+After I got the container running I had errors with the backend not being reachable outside the container. There were no errors in the logs and the port was open. However after researching I noticed flask does app binding and network configs inside the container and not available outside it by default.
+
+So I needed to modify the binding address to include host 0.0.0.0 making it publicly available. 
+
+The address 0.0.0.0 tells Flask to listen on all network interfaces inside the container, making the app accessible from the Docker host and any other network interfaces mapped by Docker.
+
+Without 0.0.0.0, the app inside the container would not “see” requests coming from outside, even though Docker’s networking is correctly set up.

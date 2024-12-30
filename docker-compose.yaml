@@ -1,0 +1,12 @@
+services:
+  backend-api:
+    build: ./backend
+    env_file:
+      - ./backend/.env
+    ports:
+      - "5000:5000"
+  
+  frontend-web:
+    build: ./frontend
+    ports:
+      - "80:80"
