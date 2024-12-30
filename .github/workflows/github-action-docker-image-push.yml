@@ -18,10 +18,10 @@ jobs:
       name: Build & push Docker image frontnend
       with:
         image: kahmed23/serverlessmovies
-        tags: frontend-v1, latest
+        tags: frontend-v1
         registry: docker.io
-        directory: frontend
-        dockerfile: .
+        directory: ../../frontend
+        dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     
@@ -29,9 +29,9 @@ jobs:
       name: Build & push Docker image backend
       with:
         image: kahmed23/serverlessmovies
-        tags: backend-v1, latest
+        tags: backend-v1
         registry: docker.io
-        directory: backend
+        directory: ../../backend
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
