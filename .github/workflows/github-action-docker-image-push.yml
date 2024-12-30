@@ -13,10 +13,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       name: Check out code
-
+    - run:
+      working-directory: ./frontend
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Build & push Docker image frontend
-      working-directory: ./frontend
       with:
         image: kahmed23/serverlessmovies
         tags: frontend-v1
@@ -27,7 +27,6 @@ jobs:
     
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Build & push Docker image backend
-      working-directory: ./backend
       with:
         image: kahmed23/serverlessmovies
         tags: backend-v1
@@ -35,5 +34,6 @@ jobs:
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+      
 
         
