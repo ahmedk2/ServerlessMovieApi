@@ -1,2 +1,5 @@
 .env
 .vscode
+infra-as-code/.DS_Store
+.DS_Store
+infra-as-code/.terraform/
