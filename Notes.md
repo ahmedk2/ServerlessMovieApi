@@ -92,3 +92,5 @@ So I needed to modify the binding address to include host 0.0.0.0 making it publ
 The address 0.0.0.0 tells Flask to listen on all network interfaces inside the container, making the app accessible from the Docker host and any other network interfaces mapped by Docker.
 
 Without 0.0.0.0, the app inside the container would not “see” requests coming from outside, even though Docker’s networking is correctly set up.
+
+The services/pods i deployed were not reachable so i chnaged service type to load balancer
